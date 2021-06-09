@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+      
+<head>
+    <title>
+        How to detect and resize
+        the window size
+    </title>
+      
+    <style>
+        body {
+            text-align: center;
+        }
+        h1 {
+            color:green;
+        }
+    </style>
+</head>
+  
+<body>
+    <h3>
+        Resizing the screen size and display its 
+        <br>corresponding width and height
+    </h3>
+    <div id="height">Height: <span></span></div>
+    <div id="width">Width: <span></span></div>
+      
+    <script>
+        const height = document.querySelector("#height span");
+        const width = document.querySelector("#width span");
+           
+        // Insert values on load of page
+        window.onload = function() {
+            height.innerHTML = window.innerHeight;
+            width.innerHTML = window.innerWidth;
+        };
+           
+        // Change values when window is resized
+        window.onresize = function() {
+           
+            // Setting the current height & width
+            // to the elements
+            height.innerHTML = window.innerHeight; 
+            width.innerHTML = window.innerWidth;
+        };
+    </script>
+</body>
+  
+</html>
